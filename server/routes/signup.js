@@ -15,7 +15,11 @@ router.post("/reg",async(req,res)=>{
         }else{
             bcrypt.genSalt(salt).then((saltHash)=>{
                 bcrypt.hash(req.body.password, saltHash).then((hashedPassword)=>{
-                    userModel.create({mail:req.body.mail, password:hashedPassword}).then((userData)=>{
+                    userModel.create({
+                        mail:req.body.mail,
+                        password:hashedPassword,
+                        confirmPassword:hashedPassword
+                    }).then((userData)=>{
                         res.status(200).send({userData});
                     })
                 }).catch((err)=>{
