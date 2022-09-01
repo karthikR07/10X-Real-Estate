@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 const propModel = require("../models/propSchema");
 const userModel = require("../models/userSchema");
 dotenv.config();
-const secretKey = process.env.secretKey;
+const secretKey = process.env.key;
 
 router.get("/view",async(req,res)=>{
     try{
@@ -17,11 +17,11 @@ router.get("/view",async(req,res)=>{
                     res.send(data);
                 })
             }else{
-                res.json("Invalid user");
+                res.status(400).json("Invalid user");
             }
         })
     }catch(err){
-        res.json(err);
+        res.status(400).json(err);
     }
 })
 

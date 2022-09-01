@@ -5,9 +5,10 @@ const jwt = require("jsonwebtoken");
 const userModel = require("../models/userSchema");
 const dotenv = require("dotenv");
 dotenv.config();
-const secretKey = process.env.secretKey;
+const secretKey = process.env.key;
 
-router.post("/enter",(req,res)=>{
+
+router.post("/login",(req,res)=>{
     userModel.find({mail:req.body.mail}).then((userdata)=>{
         if(userdata.length){
             bcrypt.compare(req.body.password, userdata[0].password).then((validate)=>{
