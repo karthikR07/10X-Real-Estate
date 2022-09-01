@@ -7,10 +7,10 @@ const propModel = require("../models/propSchema");
 
 const dotenv = require("dotenv");
 dotenv.config();
-const secretKey = process.env.secretKey;
+const secretKey = process.env.key;
 
 router.get("/done",(req,res)=>{
-    const mail = jwt.verify(req.headers.authorization, secretKey);
+    const mail = jwt.verify(req.headers.authorization, key);
     const obj = userModel.find({mail:mail}.then((userData)=>{
         res.send(userData);
     }))

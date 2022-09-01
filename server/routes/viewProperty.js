@@ -10,7 +10,7 @@ const secretKey = process.env.key;
 
 router.get("/view",async(req,res)=>{
     try{
-        const mail = jwt.verify(req.headers.authorization, secretKey);
+        const mail = jwt.verify(req.headers.authorization, key);
         userModel.find({mail:mail}).then((userData)=>{
             if(userData.length){
                 propModel.find({mail:mail}).then((data)=>{
