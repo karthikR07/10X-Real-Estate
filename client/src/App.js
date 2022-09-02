@@ -1,11 +1,10 @@
 import React from "react";
-import Login from "./Components/Login";
-import Reg from "./Components/Reg";
+import Login from "./Components/Login/Login";
+import Reg from "./Components/Signup/Reg";
 function App() {
   return (
     <React.Fragment>
       <Login/>
-      <Reg/>
     </React.Fragment>
   )
 }
