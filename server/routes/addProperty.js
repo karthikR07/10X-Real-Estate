@@ -6,7 +6,7 @@ const userModel = require("../models/userSchema");
 const propModel = require("../models/propSchema");
 const dotenv = require("dotenv");
 dotenv.config();
-const secretKey = process.env.secretKey;
+const secretKey = process.env.key;
 
 router.post("/addprop", (req,res)=>{
     try{
@@ -54,9 +54,9 @@ router.post("/addprop", (req,res)=>{
                 Latitude:req.body.Latitute , 
                 Longitude:req.body.Longitude
             })
-            res.send(200).json("success");
+            res.status(200).json("success");
             }else{
-                res.send(400).json('Unauthorized User');
+                res.status(400).json('Unauthorized User');
             }
         })
     }catch(err){

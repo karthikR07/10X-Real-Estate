@@ -16,7 +16,7 @@ const propSchema = new mongoose.Schema({
     },
     PropertyType:{
         type:String,
-        required:true
+        // required:true
     },
     PropertyAge:{
         type:String,
@@ -42,7 +42,7 @@ const propSchema = new mongoose.Schema({
     },
     TotalArea:{
         type:String,
-        required:true
+        // required:true
     },
     AreaUnit:{
         type:String,
@@ -79,14 +79,14 @@ const propSchema = new mongoose.Schema({
     },
     Mobile:{
         type:String,
-        required:true
+        // required:true
     },
     PostedBy:{
         type:String,
     },
     DaysLeft:{
         type:String,
-        required:true
+        // required:true
     },
     SaleType:{
         type:String,
