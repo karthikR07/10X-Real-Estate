@@ -7,7 +7,7 @@ const propModel = require("../models/propSchema");
 
 const dotenv = require("dotenv");
 dotenv.config();
-const secretKey = process.env.key;
+const key = process.env.key;
 
 router.get("/done",(req,res)=>{
     const mail = jwt.verify(req.headers.authorization, key);
