@@ -13,7 +13,9 @@ router.post("/addprop", (req,res)=>{
         const mail = jwt.verify(req.headers.authorization, secretKey);
         userModel.find({mail:mail}).then((userData)=>{
             if(userData.length){
-                propModel.create({mail:userData[0].mail, PropertyType:req.body.PropertyType,
+                propModel.create({
+                mail:userData[0].mail,
+                PropertyType:req.body.PropertyType,
                 Views:Math.floor((Math.random()*100)+1),
                 Negotiable:req.body.Negotiable,
                 Ownership:req.body.Ownership,

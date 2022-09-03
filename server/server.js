@@ -17,7 +17,7 @@ dotenv.config();
 
 let URL = "mongodb://localhost:27017/Real-Estate"
 
-mongoose.connect(URL,{useNewUrlParser: true, useUnifieldTopology:true},(err)=>{
+mongoose.connect(URL,{useNewUrlParser: true},(err)=>{
     if(!err){
         console.log("DB Connected");
     }

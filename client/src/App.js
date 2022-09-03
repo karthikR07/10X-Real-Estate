@@ -1,12 +1,18 @@
 import React from "react";
-// import Login from "./Components/Login/Login";
-import SignUp from "./Components/SignUp/SignUp";
+import Login from "./Components/Login/Login";
+// import SignUp from "./Components/SignUp/SignUp";
+import {Routes,Route,BrowserRouter} from "react-router-dom"
 function App() {
-  return (
-    <React.Fragment>
-      {/* <Login/> */}
-      <SignUp/>
-    </React.Fragment>
+  return(
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login/>}>
+            
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
