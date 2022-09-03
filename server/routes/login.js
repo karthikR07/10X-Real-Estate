@@ -15,6 +15,7 @@ router.post("/login",(req,res)=>{
                 if(validate){
                     const authToken = jwt.sign(userdata[0].mail, secretKey);
                     console.log(authToken);
+                    
                     res.status(200).send({authToken});
                 }
                 else{
