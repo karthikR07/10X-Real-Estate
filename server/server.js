@@ -42,4 +42,4 @@ App.use("/signup",signupController);
 App.use("/login",loginController);
 App.use("/addProperty",addPropController);
 App.use("/viewProperty",viewPropController);
-App.use("/logout",logoutController);
+// App.use("/logout",logoutController);
