@@ -1,41 +1,41 @@
 .header {
-    margin-left: 200px;  
-    width: 1080px;
-    height:75px;
-    left:10px;
-    background-color: white;
-    border: 2px solid rgb(208, 236, 236);
-  }
-  
-  .id{
-    display: flex;
-    margin-left: 55px;
-    margin-top: 25px;
-  }
-  .dropDown{
-       width: 20px;
-      border: none;
-      margin-right: 10px;
-    }
-    
-  .heading{
-    display: flex;
-    float: right;
+  margin-left: 200px;  
+  width: 86%;
+  height:75px;
+  left:10px;
+  background-color: white;
+  border: 2px solid rgb(208, 236, 236);
+}
+
+.id{
+  display: flex;
+  margin-left: 55px;
+  margin-top: 25px;
+}
+.dropDown{
+     width: 20px;
+    border: none;
     margin-right: 10px;
-    
   }
-  .heading p{
-    margin-right: 10px;
-  }  
-  /* .icon{
-    display: inline;
-    padding-left: 10px;
-    float:left;
-    background-color: white;
   
-  } */
+.heading{
+  display: flex;
+  float: right;
+  margin-right: 10px;
   
-  .dropdown{
-    margin-left: 5px;
-  
-  }
+}
+.heading p{
+  margin-right: 10px;
+}  
+/* .icon{
+  display: inline;
+  padding-left: 10px;
+  float:left;
+  background-color: white;
+
+} */
+
+.dropdown{
+  margin-left: 5px;
+
+}

@@ -20,23 +20,24 @@ function ListProp(){
                 </form>
                 <button type="submit" value="+Add Property" className="button07">+Add Property</button>
             </div>
-            <div className="container2">
-                <TableContainer className="TC">
+            <div className="info">
+                <TableContainer className="tc">
                     <Table sx={{minWidth:650}} aria-label="simple table">
-                        <TableHead className="TH">
+                        <TableHead className="th">
                             <TableRow>
-                                <TableCell >PPDID</TableCell>
-                                <TableCell >Images</TableCell>
-                                <TableCell >Property</TableCell>
-                                <TableCell >Contact</TableCell>
-                                <TableCell >Area</TableCell>
-                                <TableCell >Views</TableCell>
-                                <TableCell >Status</TableCell>
-                                <TableCell >Days Left</TableCell>
-                                <TableCell >Action</TableCell>
+                                <TableCell style={{color:"#284E91"}} >PPDID</TableCell>
+                                <TableCell style={{color:"#284E91"}}>Images</TableCell>
+                                <TableCell style={{color:"#284E91"}}>Property</TableCell>
+                                <TableCell style={{color:"#284E91"}}>Contact</TableCell>
+                                <TableCell style={{color:"#284E91"}}>Area</TableCell>
+                                <TableCell style={{color:"#284E91"}}>Views</TableCell>
+                                <TableCell style={{color:"#284E91"}}>Status</TableCell>
+                                <TableCell style={{color:"#284E91"}}>Days Left</TableCell>
+                                <TableCell style={{color:"#284E91"}}>Action</TableCell>
                             </TableRow>
-                            <TableBody>
-                                <TableRow>
+                        </TableHead>
+                        <TableBody>
+                                <TableRow >
                                     <TableCell>PPDID</TableCell>
                                     <TableCell><img src=""/></TableCell>
                                     <TableCell>PropertyType</TableCell>
@@ -48,7 +49,6 @@ function ListProp(){
                                     <TableCell><img src=""/><img src=""/></TableCell>
                                 </TableRow>
                             </TableBody>
-                        </TableHead>
                     </Table>
                 </TableContainer>
             </div>
