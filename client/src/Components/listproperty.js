@@ -13,12 +13,12 @@ function ListProp(){
         <div>
             <SideContent/>
             <Header/>
-            <div className="container">
+            <div className="box1">
                 <form className="searchBar">
                     <input type = "text" placeholder="Search" name="q"></input>
                     <button><img src=""/></button>
                 </form>
-                <button type="submit" value="+Add Property" className="button07">+Add Property</button>
+                <button style={{backgroundColor:"#284E91"}} type="submit" value="+Add Property" className="button07">+Add Property</button>
             </div>
             <div className="info">
                 <TableContainer className="tc">

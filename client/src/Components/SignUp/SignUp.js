@@ -1,46 +1,89 @@
-import React, { useState } from "react";
-import "./style.css"
-import {AiOutlineEyeInvisible,AiOutlineEye} from "react-icons/ai"
-
+import "./SignUp.css";
+import {useState}from "react";
+import axios from "axios";
+import{Link, useNavigate}from "react-router-dom";
 
 const SignUp =()=>{
-    const [show ,setShow]= useState(false)
-    const showPassword =()=>{
-        setShow(prevState=>!prevState)
+    const [data,setData] = useState({mail:"", password:"", confirmpassword:""});
+    const navigate = useNavigate();
+    
+    function handlemail(e){
+        const mail = e.target.value;
+        setData(form =>({...form,mail:mail}));
     }
+    function handlepassword(e){
+        const pw = e.target.value;
+        setData(form=>({...form,password:pw}));
+    }
+    function handleConfirmPass(e){
+        const cpw = e.target.value;
+        setData(form=>({...form,confirmpassword:cpw}));
+    }
+
+    function handlesignup(e){
+        e.preventDefault();
+        if(data.mail.length == 0){
+            alert("Enter your email");
+        }else if(data.password.length<7){
+            alert("Minimum 7 letters required for password");
+        }else if(data.password !== data.confirmpassword){
+            alert("Password does not match")
+        }else{
+            axios({
+                url:"http://localhost:3001/signup/reg",
+                method:"POST",
+                headers:{
+
+                },
+                data:data
+            }).then((res)=>{
+                navigate("/");
+                setData({mail:"",password:"",confirmpassword:""})
+                console.log(res);
+            }).catch((err)=>{
+                alert("User Already Exist")
+            })
+        }
+    }
+
     return(
-        <body>
-    <div className="signup-page">
-        <h1>Sign up</h1>
-        <h6>Create New Account</h6>
-        <form method="post">
-            <div className="text_field">
-                <input type="text" placeholder="User ID" required/>
-                <span></span>
+        <div className="mainpage">
+            <div className="container">
+                <div className="logo">
+                    <div>
+                        <h1>10X Real Estate</h1>
+                    </div>
+                </div>
+                <form className="mainform" onSubmit={handlesignup}>
+                    <div >
+                        <p style={{opacity:"0.6"}}>Create New Account</p>
+                    </div>
+                    <br/> 
+                    <div className="form-all">  
+                        <input className="mail" type="email" placeholder="Mail ID" onChange={handlemail}></input>
+                    </div>
+                    <br/> 
+                    <div className="form-all">
+                        <input className="password" type="password" placeholder="Password" onChange = {handlepassword}></input>
+                    </div>
+                    <br/> 
+                    <div className="form-all">
+                        <input className="confirm" type="password" placeholder="Confirm Password" onChange= {handleConfirmPass} ></input>
+                    </div>
+                    <br/> 
+                    <br/>
+                    <div className="form-all">
+                        <input className="btn" value="Signup" type="submit" />
+                    </div>
+                    <br/> 
+                    <div className="form-all">
+                    <Link to="/"><a className="sign">Sign in</a></Link>
+                    </div>        
+                </form>
             </div>
-            <div className="text_field">
-                <input type={show ? "text" : "password"} placeholder="Password" id="myInput" required/>
-                <span className="eye1" onClick={showPassword}>
-                    {
-                        show ? <AiOutlineEye/> : <AiOutlineEyeInvisible/>
-                    }
-                </span>
-            </div>
-            <div className="text_field1">
-                <input type={show ? "text" : "password"} placeholder="Confirm Password" id="myInput1" required/>
-                <span className="eye2" onClick={showPassword}>
-                    {
-                        show ? <AiOutlineEye/> : <AiOutlineEyeInvisible/>
-                    }
-                </span>
-            </div>
-            <button type="submit">Sign up</button>
-            <div className="sign-up">
-                <a href="#">Sign in</a>
-            </div>
-        </form>
-    </div>
-</body>
+
+            
+        </div>
     )
 }
 

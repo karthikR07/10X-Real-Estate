@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "./Components/Login/Login";
-// import SignUp from "./Components/SignUp/SignUp";
+import SignUp from "./Components/SignUp/SignUp";
 import {Routes,Route,BrowserRouter} from "react-router-dom"
 import ListProp from "./Components/listproperty";
 function App() {
@@ -9,6 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login/>}></Route>
+          <Route path="/signup" element={<SignUp/>}></Route>
           <Route path="/viewprop" element ={<ListProp/>}></Route>
         </Routes>
       </BrowserRouter>

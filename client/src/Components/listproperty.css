@@ -1,4 +1,4 @@
-.container{
+.box1{
   display: flex;
 }
 
@@ -37,7 +37,7 @@
     color: white;
     border-radius: 20px;
     margin-top: 20px;
-    margin-left: 900px;
+    margin-left: 600px;
     border:none;
     background-color:#284E91;
     box-shadow: 3px 5px 4px  rgb(119, 118, 118);
@@ -46,18 +46,18 @@
 
 .info{
     margin-top: 50px;
-    width: 1275px;
+    width: 1000px;
     height: auto;
     justify-content: center;
     border: 2px solid white;
     margin-left: 250px;
     box-shadow: 5px 3px 5px 3px  rgb(107, 102, 102);
+    
 }
 
-
 .status{
-  background-color: #F5FAF5;
-  color: #284E91;
+  background-color: #284E91;
+  color: white;
   border: 1px solid white;
   border-radius: 10px;
   height: 30px;
