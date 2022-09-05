@@ -87,7 +87,7 @@ function ListProp(){
                                         <TableCell>{user.Mobile}</TableCell>
                                         <TableCell>{user.TotalArea}</TableCell>
                                         <TableCell>{user.Views}</TableCell>
-                                        <TableCell><input type="submit" value="unsold" className="status" onChange={handleStatus}/></TableCell>
+                                        <TableCell><input type="submit" value="unsold" className="status" onClick={handleStatus}/></TableCell>
                                         <TableCell>{user.DaysLeft}</TableCell>
                                         <TableCell><img src=""/><img src=""/></TableCell>
                                     </TableRow>
