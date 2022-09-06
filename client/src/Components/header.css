@@ -26,18 +26,19 @@
   right: 3.5%;
   top: 3.47%;
   bottom: 94.59%;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px;
   padding-right: 50px;
-  padding-left: 5px;
+  padding-left: 5px; */
   display: flex;
   float: right;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   
 }
 
 
 .heading p{
   margin-right: 10px;
+  cursor: pointer;
 }  
 .icon{
   display: inline;

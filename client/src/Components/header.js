@@ -1,10 +1,10 @@
 import "./header.css";
 
-import Nav from "react-bootstrap/Nav"
-import NavDropdown from "react-bootstrap/NavDropdown"
+// import Nav from "react-bootstrap/Nav"
+// import NavDropdown from "react-bootstrap/NavDropdown"
 import {useState, useEffect}from "react";
 import {useNavigate, useHistory} from "react-router-dom";
-import {AiOutlineUser} from "react-icons/ai"
+// import {AiOutlineUser} from "react-icons/ai"
 
 function Header(){
     const authToken = localStorage.getItem("authorization");
