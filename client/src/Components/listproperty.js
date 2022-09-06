@@ -20,9 +20,9 @@ function ListProp(){
     
     const navigate = useNavigate();
 
-    // function handelAddProp(e){
-    //     navigate("/");
-    // }
+    function handelAddProp(e){
+        navigate("/mainProp");
+    }
 
     useEffect(()=>{
         fetch("http://localhost:3001/viewProperty/view",{method :"GET",headers:{authorization: authToken}})
@@ -50,7 +50,7 @@ function ListProp(){
                     <input onChange={(e)=>{setSearch(e.target.value)}} type = "text" placeholder="Search" name="q"></input>
                     <button><img src=""/></button>
                 </form>
-                <button style={{backgroundColor:"#284E91"}} type="submit" value="+Add Property" className="button07">+Add Property</button>
+                <button style={{backgroundColor:"#284E91"}} type="submit" value="+Add Property" className="button07" onClick={handelAddProp}>+Add Property</button>
             </div>
             <div className="info">
                 <TableContainer className="tc">
