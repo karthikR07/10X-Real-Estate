@@ -40,6 +40,7 @@ const SignUp =()=>{
                 navigate("/");
                 setData({mail:"",password:"",confirmpassword:""})
                 console.log(res);
+                alert("User craeted sucessfully")
             }).catch((err)=>{
                 alert("User Already Exist")
             })

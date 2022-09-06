@@ -1,6 +1,9 @@
 // import Header from "./header";
 import "./sideContent.css";
-
+import {AiFillHome,AiOutlineBell} from "react-icons/ai"
+import {GrDownload,GrFormUpload} from "react-icons/gr"
+import {IoMdEye} from "react-icons/io"
+import {BsTag} from "react-icons/bs"
 function SideContent(){
     return(
     <div class = "side">
@@ -13,12 +16,12 @@ function SideContent(){
                 </div>
             </div>
             <div className = "container2">
-            <li><img src=""className="home"/>&nbsp;&nbsp;<a href="#"> Property</a></li><br/>
-            <li><img src=""/>&nbsp;&nbsp;<a href="#" className="link5"> Assistance</a></li><br/>
-            <li><img src=""/>&nbsp;&nbsp;<a href="#" className="link5"> Received Interest</a></li><br/>
-            <li><img src=""/>&nbsp;&nbsp;<a href="#" className="link5"> Sent Interest</a></li><br/>
-            <li><img src=""/>&nbsp;&nbsp;<a href="#" className="link5"> Property Views</a></li><br/>
-            <li><img src=""/>&nbsp;&nbsp;<a href="#" className="link5"> Tariff Plan</a></li><br/>
+            <li><img src=""/>&nbsp;&nbsp;<a href="#"><AiFillHome/> Property</a></li><br/>
+            <li><img src=""/>&nbsp;&nbsp;<a href="#" className="link5"><AiOutlineBell/>PPD Assistance</a></li><br/>
+            <li><img src=""/>&nbsp;&nbsp;<a href="#" className="link5"><GrDownload/> Received Interest</a></li><br/>
+            <li><img src=""/>&nbsp;&nbsp;<a href="#" className="link5"> <GrFormUpload/>Sent Interest</a></li><br/>
+            <li><img src=""/>&nbsp;&nbsp;<a href="#" className="link5"><IoMdEye/> Property Views</a></li><br/>
+            <li><img src=""/>&nbsp;&nbsp;<a href="#" className="link5"><BsTag/> Tariff Plan</a></li><br/>
             </div>
         </div>
     </div>
