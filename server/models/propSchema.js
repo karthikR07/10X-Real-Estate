@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 
 const propSchema = new mongoose.Schema({
     mail:{
-        type:String,
+        type:Email,
         required:true
     },
     price:{
-        type:String,
+        type:Number,
     },
     Negotiable:{
         type:String,
@@ -28,27 +28,27 @@ const propSchema = new mongoose.Schema({
         type:String,
     },
     Views:{
-        type:String,
+        type:Number,
         
     },
     BankLoan:{
         type:String,
     },
     Length:{
-        type:String,
+        type:Number,
     },
     Breadth:{
-        type:String,
+        type:Number,
     },
     TotalArea:{
-        type:String,
+        type:Number,
         // required:true
     },
     AreaUnit:{
         type:String,
     },
     NoOfBHK:{
-        type:String,
+        type:Number,
     },
     NoOfFloor:{
         type:String,
@@ -78,14 +78,16 @@ const propSchema = new mongoose.Schema({
         type:String,
     },
     Mobile:{
-        type:String,
+        type:Number,
+        maxLength :10,
+        minLength:10
         // required:true
     },
     PostedBy:{
         type:String,
     },
     DaysLeft:{
-        type:String,
+        type:Number,
         // required:true
     },
     SaleType:{
@@ -101,7 +103,7 @@ const propSchema = new mongoose.Schema({
         type:String,
     },
     Email:{
-        type:String,
+        type:Email,
     },
     City:{
         type:String,
@@ -110,7 +112,9 @@ const propSchema = new mongoose.Schema({
         type:String,
     },
     Pincode:{
-        type:String,
+        type:Number,
+        minLength:6,
+        maxLength:6
     },
     Address:{
         type:String,
