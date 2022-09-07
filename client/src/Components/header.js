@@ -11,7 +11,7 @@ function Header(){
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:3001/logout/done",{method:"GET",headers:{authorization:authToken}})
+        fetch("https://server-realestate-10x.herokuapp.com/logout/done",{method:"GET",headers:{authorization:authToken}})
         .then((res)=>{
             return res.json();
         }).then((uData)=>{

@@ -30,7 +30,7 @@ const SignUp =()=>{
             alert("Password does not match")
         }else{
             axios({
-                url:"http://localhost:3001/signup/reg",
+                url:"https://server-realestate-10x.herokuapp.com/signup/reg",
                 method:"POST",
                 headers:{
 
