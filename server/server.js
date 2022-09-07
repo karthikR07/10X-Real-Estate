@@ -15,7 +15,7 @@ App.use(express.json({limit:"30mb",extended:true}));
 App.use(express.urlencoded({extended:false}));
 dotenv.config();
 
-let URL = "mongodb://localhost:27017/Real-Estate"
+let URL = "mongodb+srv://user1:123tester@realestate.4ldww6u.mongodb.net/?retryWrites=true&w=majority"
 
 mongoose.connect(URL,{useNewUrlParser: true},(err)=>{
     if(!err){

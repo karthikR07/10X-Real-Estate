@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const propSchema = new mongoose.Schema({
     mail:{
-        type:Email,
+        type:String,
         required:true
     },
     price:{
@@ -103,7 +103,7 @@ const propSchema = new mongoose.Schema({
         type:String,
     },
     Email:{
-        type:Email,
+        type:String,
     },
     City:{
         type:String,
